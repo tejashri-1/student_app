@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Registration Form</h2>
+
+        <form name="studentForm" action="/add" method="post" onsubmit="return validateForm()">
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/validate.js') }}"></script>
+</body>
+</html>
+
+
